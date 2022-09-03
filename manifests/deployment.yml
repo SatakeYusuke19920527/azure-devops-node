@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: satestcontainerimage 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: satestcontainerimage
+  template:
+    metadata:
+      labels:
+        app: satestcontainerimage 
+    spec:
+      containers:
+        - name: satestcontainerimage 
+          image: satestcontainerregistry.azurecr.io/satestcontainerimage
+          ports:
+          - containerPort: satest-container-port
