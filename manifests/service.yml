@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: satestcontainerimage
+spec:
+    type: LoadBalancer
+    ports:
+    - port: satest-container-port 
+    selector:
+        app: satestcontainerimage
